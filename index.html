@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- customizing script -->
     <script>
         tailwind.config = {
@@ -21,6 +26,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        t_color: '#212121',
+                        p_color: '#737373'
+
                     },
                     fontFamily: {
                         manrope: '"Manrope", sans-serif',
@@ -35,13 +43,95 @@
 
 <body class="font-manrope">
     <!-- header section -->
-    <header>
-        <h1 class="text-xl font-extrabold">Testing!</h1>
+    <header class="md:container border border-red-600 mx-auto px-3 lg:px-0">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start min-w-full lg:min-w-0 justify-between border border-teal-500 ">
+                    
+                    <div class="flex flex-row">
+                        <div class=" bg-[#ABEF5F] p-2 rounded-full mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                        <a href="#" class="text-3xl font-extrabold text-t_color">Rinterio</a>
+                    </div>
+
+                    <div class="dropdown ">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal  px-1 text-base text-p_color">
+                        <li class="font-extrabold duration-700 ease-in-out text-[#494949]"><a>Home</a></li>
+                        <li class="hover:font-extrabold duration-700 text-[#494949] ease-in-out"><a>Services</a></li>
+                        <li class="hover:font-extrabold duration-700 text-[#494949] ease-in-out"><a>Portfolio</a></li>
+                        <li class="hover:font-extrabold duration-700 text-[#494949] ease-in-out"><a>Blogs</a></li>
+                        <li class="hover:font-extrabold duration-700 text-[#494949] ease-in-out"><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end hidden md:inline-flex space-x-2 border border-green-500 ">
+                    <div class="  p-3 bg-white border rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 text-[#737373]">
+                            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
+                          </svg>
+                                                 
+                    </div>
+                    <div class="  p-3 bg-white border rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#737373]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                          </svg>                          
+                    </div>
+                    <div class="  btn bg-[#ABEF5F] px-15 rounded-full h-16 px-5">
+                        <a class="text-xl font-extrabold text-t_color ">Book Consult</a>
+                        <div class=" bg-[#171817] text-white p-2 rounded-full mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="hero bg-base-200 min-h-screen">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Hello there</h1>
+                    <p class="py-6">
+                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                      quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
+              </div>
+        </section>
     </header>
 
     <!-- main section -->
-    <main>
-
+    <main >
+        
     </main>
 
     <!-- footer section -->
